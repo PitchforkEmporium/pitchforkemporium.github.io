@@ -151,7 +151,7 @@ inner{
   margin-right: 0.8vw;
 }
 
-#crtBtn {
+#crtBtn{
   display: block;
   position: relative;
   float: left;
@@ -163,6 +163,10 @@ inner{
   background-color: #008;
   margin-left: 0.7vw;
   cursor: pointer;
+}
+
+#crtBtn:hover{
+  background-color:#00c;
 }
 
 #crtBtn::selection,#crtBtn a::selection{
