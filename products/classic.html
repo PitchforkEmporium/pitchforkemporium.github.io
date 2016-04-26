@@ -96,6 +96,7 @@
     
     function set(setID){
       var pitch=pitchforks[setID];
+      idFull=setID;
       sum=0;
       for (i=0;i<pitch.length;i++){sum+=pitch.charCodeAt(i);}
       document.getElementById("mainDisplay").innerHTML=pitchforks[setID];
