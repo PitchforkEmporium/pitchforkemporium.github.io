@@ -2,6 +2,7 @@
   <head>
     <link rel="icon" href="http://picturelements.github.io/pitchforkemporium/PEicon.png">
     <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet" type="text/css">
     <style>
       body{
         background-color:#c1272d;
@@ -39,7 +40,7 @@
         height:2px;
         top:50%;
         margin-top:-1px;
-        background-color:#ffb4b7;
+        background-color:white;
         animation:expand 1s forwards 1;
         animation-delay:2s;
         z-index:10;
@@ -53,6 +54,18 @@
         top:0;
         background-color:#c1272d;
         z-index:0;
+      }
+      
+      #options{
+        display:block;
+        position:fixed;
+        font-family:Roboto,Arial,sans-serif;
+        font-size:3vw;
+        top:40vw;
+        width:10vw;
+        text-align:center;
+        color:white;
+        z-index:-1;
       }
       
       @keyframes drop{
@@ -70,6 +83,6 @@
     <div id="name"><a href="http://pitchforkemporium.github.io/">Pitchfork Emporium</a></div>
     <div id="line"></div>
     <div id="blocker"></div>
-    <div style="position:fixed; display:block; top:40%; z-index:-1">LOL</div>
+    <div id="options" style="left:50%; margin-left:-5vw">LOL</div>
   </body>
 </html>
