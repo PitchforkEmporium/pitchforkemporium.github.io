@@ -20,6 +20,7 @@
         text-align:center;
         animation:drop 1s forwards 1;
         animation-delay:1s;
+        z-index:10;
       }
       
       #name a{
@@ -27,6 +28,7 @@
         text-decoration: none !important;
         text-shadow: 5px 5px 0 #961F1F;
         transition: 300ms;
+        z-index:10;
       }
       
       #line{
@@ -40,6 +42,7 @@
         background-color:#ffb4b7;
         animation:expand 1s forwards 1;
         animation-delay:2s;
+        z-index:10;
       }
       
       #blocker{
@@ -48,7 +51,8 @@
         width:100%;
         height:50%;
         top:0;
-        background-color:#ffb4b7;
+        background-color:#c1272d;
+        z-index:0;
       }
       
       @keyframes drop{
