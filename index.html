@@ -65,6 +65,7 @@
         width:10vw;
         text-align:center;
         color:white;
+        animation:dropdown 1s forwards 1;
         z-index:-1;
       }
       
@@ -77,12 +78,16 @@
         80%{width:74%; left:13%;}
         100%{width:70%; left:15%;}
       }
+      
+      @keyframes dropdown{
+        to{top:52%;}
+      }
     </style>
   </head>
   <body>
     <div id="name"><a href="http://pitchforkemporium.github.io/">Pitchfork Emporium</a></div>
     <div id="line"></div>
     <div id="blocker"></div>
-    <div id="options" style="left:50%; margin-left:-5vw">LOL</div>
+    <div id="options" style="left:50%; margin-left:-5vw; animation-delay:3s">LOL</div>
   </body>
 </html>
