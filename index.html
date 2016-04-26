@@ -5,6 +5,7 @@
     <style>
       body{
         background-color:#c1272d;
+        margin:0;
       }
       #name{
         display:block;
@@ -29,12 +30,17 @@
       #line{
         position:fixed;
         display:block;
-        width:80%;
-        left:10%;
-        height:10px;
+        width:0%;
+        left:50%;
+        height:2px;
         top:50%;
-        margin-top:-5px;
+        margin-top:-1px;
         background-color:white;
+        animation:expand 1s 1;
+      }
+      
+      @keyframes expand{
+        to{width:70%; left:15%;}
       }
     </style>
   </head>
