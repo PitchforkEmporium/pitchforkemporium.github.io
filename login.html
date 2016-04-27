@@ -101,8 +101,10 @@
           $.getJSON(url,
           function(data){
               userData=data.data.comment_karma;
+              sessionStorage.setItem("user",data.data.comment_karma);
             });
         });
+        userData=sessionStorage.getItem("user");
         console.log("lol: "+userData);
         if (userData===null||userData===undefined){
           document.getElementById("errorMsg").innerHTML="An error uccurred while logging in. Try again.";
