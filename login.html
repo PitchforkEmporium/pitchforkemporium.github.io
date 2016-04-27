@@ -99,9 +99,12 @@
         $(function(){
           $.getJSON(url,
           function(data){
-              //karma=data.data.comment_karma;
+              karma=data.data.comment_karma;
               //document.getElementById("display").innerHTML=karma;
               console.log(data.data.comment_karma);
+              if (data.data.comment_karma==undefined||data.data.comment_karma==null){
+                document.getElementById("errorMsg").innerHTML="An error uccurred while logging in. Try again.";
+              }
             });
         });
       }
