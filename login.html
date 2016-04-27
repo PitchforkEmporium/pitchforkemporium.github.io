@@ -105,11 +105,11 @@
               console.log(data.data.comment_karma);
             });
         });
-        if (karma==undefined||karma==null){
-          document.getElementById("errorMsg").innerHTML="An error uccurred while logging in. Try again.";
-        }else{
+        if (karma!=undefined){
           console.log("DID IT!");
           window.location.href="http://pitchforkemporium.github.io/";
+        }else{
+          document.getElementById("errorMsg").innerHTML="An error uccurred while logging in. Try again.";
         }
       }
       //.error(function() {document.getElementById("errorMsg").innerHTML="An error uccurred while logging in. Try again.";})
