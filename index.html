@@ -54,7 +54,7 @@
         z-index:0;
       }
       
-      #options{
+      .options{
         display:block;
         position:relative;
         font-family:Roboto,Arial,sans-serif;
@@ -65,7 +65,7 @@
         z-index:-2;
       }
       
-      #options a{
+      .options a{
         color:white;
         text-decoration:none;
         pointer-events:auto;
@@ -112,7 +112,6 @@
         for (i=0;i<stuff.length;i++){
           stuff[i].style.animation="dropdown 1s forwards 1";
           stuff[i].style.animationDelay=""+(2+0.3*i)+"s";
-          console.log(""+(2+0.3*i)+"s");
         }
       }
     </script>
