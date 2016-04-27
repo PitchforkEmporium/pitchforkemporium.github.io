@@ -94,7 +94,7 @@
   <body>
     <script>
       function verify(){
-        var userData;
+        var userData="";
         var user=document.getElementById("input").value;
         var url="http://www.reddit.com/"+user+"/about.json?jsonp=?";
         $(function(){
@@ -104,7 +104,7 @@
             });
         });
         console.log("lol: "+userData);
-        if (userData===undefined){
+        if (userData===null){
           document.getElementById("errorMsg").innerHTML="An error uccurred while logging in. Try again.";
         }else{
           console.log("DID IT!");
