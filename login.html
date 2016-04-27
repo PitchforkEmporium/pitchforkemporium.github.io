@@ -101,18 +101,16 @@
           $.getJSON(url,
           function(data){
               karma=data.data.comment_karma;
-              //document.getElementById("display").innerHTML=karma;
               console.log("lol: "+karma);
             });
         });
-        if (karma!=undefined){
+        if (karma!==undefined){
           console.log("DID IT!");
           window.location.href="http://pitchforkemporium.github.io/";
         }else{
           document.getElementById("errorMsg").innerHTML="An error uccurred while logging in. Try again.";
         }
       }
-      //.error(function() {document.getElementById("errorMsg").innerHTML="An error uccurred while logging in. Try again.";})
     </script>
     <div id="inner">
       <div id="name"><a href="http://pitchforkemporium.github.io/">Pitchfork Emporium</a></div>
