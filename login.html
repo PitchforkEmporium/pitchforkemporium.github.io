@@ -102,12 +102,11 @@
               karma=data.data.comment_karma;
               //document.getElementById("display").innerHTML=karma;
               console.log(data.data.comment_karma);
-              if (data.data.comment_karma==undefined||data.data.comment_karma==null){
-                document.getElementById("errorMsg").innerHTML="An error uccurred while logging in. Try again.";
-              }
             });
         });
-        console.log(karma);
+        if (karma==undefined||karma==null){
+          document.getElementById("errorMsg").innerHTML="An error uccurred while logging in. Try again.";
+        }
       }
       //.error(function() {document.getElementById("errorMsg").innerHTML="An error uccurred while logging in. Try again.";})
     </script>
