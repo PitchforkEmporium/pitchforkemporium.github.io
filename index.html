@@ -103,8 +103,14 @@
         to{top:54%;}
       }
     </style>
+    <script>
+      function setAlign(){
+        console.log(document.getElementById("optionContainer").style.width);
+        console.log(document.getElementById("optionContainer").width);
+      }
+    </script>
   </head>
-  <body>
+  <body onload=setAlign()>
     <div id="name"><a href="http://pitchforkemporium.github.io/products">Pitchfork Emporium</a></div>
     <div id="line"></div>
     <div id="blocker"></div>
