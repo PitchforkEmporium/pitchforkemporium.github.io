@@ -94,7 +94,6 @@
   <body>
     <script>
       function verify(){
-        document.getElementById("errorMsg").innerHTML="Sent request to reddit.com";
         var user=document.getElementById("input").value;
         var url="http://www.reddit.com/"+user+"/about.json?jsonp=?";
         $(function(){
