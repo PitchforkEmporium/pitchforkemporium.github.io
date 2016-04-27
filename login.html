@@ -94,16 +94,16 @@
   <body>
     <script>
       function verify(){
-        var karma;
+        var userData;
         var user=document.getElementById("input").value;
         var url="http://www.reddit.com/"+user+"/about.json?jsonp=?";
         $(function(){
           $.getJSON(url,
           function(data){
-              karma=data.data.comment_karma;
+              userData=data.data.comment_karma;
             });
         });
-        console.log("lol: "+karma);
+        console.log("lol: "+userData);
         if (karma===undefined){
           document.getElementById("errorMsg").innerHTML="An error uccurred while logging in. Try again.";
         }else{
