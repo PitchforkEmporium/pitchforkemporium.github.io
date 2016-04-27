@@ -63,6 +63,7 @@
         display:block;
         position:relative;
         font-family:Roboto,Arial,sans-serif;
+        color:white;
         font-size:3vw;
         top:30%;
         text-align:center;
@@ -118,7 +119,7 @@
         document.getElementById("line").style.animation="expand 1s forwards 1s 1"
         var stuff=document.getElementsByClassName("options");
         for (i=0;i<stuff.length;i++){
-          stuff[i].style.animation="dropdown 1s forwards "+(1.2+0.3*i)+"s 1";
+          stuff[i].style.animation="dropdown 1s forwards "+(1.2+0.15*i)+"s 1";
         }
       }
     </script>
@@ -131,12 +132,15 @@
       <div class="options">
         <a href="http://pitchforkemporium.github.io/login">log in</a>
       </div>
+      <div class="option">|</div>
       <div class="options">
         <a href="http://pitchforkemporium.github.io/products">products</a>
       </div>
+      <div class="option">|</div>
       <div class="options">
         <a href="http://pitchforkemporium.github.io/diy">DIY</a>
       </div>
+      <div class="option">|</div>
       <div class="options">
         <a href="http://pitchforkemporium.github.io/about">about</a>
       </div>
