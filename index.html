@@ -20,8 +20,6 @@
         top:-10%;
         margin-top:-12vw;
         text-align:center;
-        animation:drop 1s forwards 1;
-        animation-delay:1s;
         pointer-events:auto;
         z-index:10;
       }
@@ -43,8 +41,7 @@
         top:50%;
         margin-top:-1px;
         background-color:white;
-        animation:expand 1s forwards 1;
-        animation-delay:2s;
+        animation-delay:1s;
         z-index:10;
       }
       
@@ -108,9 +105,13 @@
         console.log(document.getElementById("optionContainer").style.width);
         console.log(document.getElementById("optionContainer").width);
       }
+      function setAni(){
+        document.getElementById("name").style.animation="animation:drop 1s forwards 1;"
+        document.getElementById("line").style.animation="animation:expand 1s forwards 1;"
+      }
     </script>
   </head>
-  <body>
+  <body onload=setAni()>
     <div id="name"><a href="http://pitchforkemporium.github.io/products">Pitchfork Emporium</a></div>
     <div id="line"></div>
     <div id="blocker"></div>
