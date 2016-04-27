@@ -64,9 +64,9 @@
         font-family:Roboto,Arial,sans-serif;
         font-size:3vw;
         top:30%;
-        width:10vw;
         text-align:center;
         animation:dropdown 1s forwards 1;
+        float:left;
         z-index:-2;
       }
       
@@ -93,20 +93,22 @@
     </style>
   </head>
   <body>
-    <div id="name"><a href="http://pitchforkemporium.github.io/">Pitchfork Emporium</a></div>
+    <div id="name"><a href="http://pitchforkemporium.github.io/products">Pitchfork Emporium</a></div>
     <div id="line"></div>
     <div id="blocker"></div>
-    <div id="options" style="left:30%; animation-delay:3s">
-      <a href="http://pitchforkemporium.github.io/products">LOL</a>
-    </div>
-    <div id="options" style="left:40%; animation-delay:3.3s">
-      <a href="http://pitchforkemporium.github.io/products">LOL2</a>
-    </div>
-    <div id="options" style="left:50%; animation-delay:3.6s">
-      <a href="http://pitchforkemporium.github.io/products">LOL3</a>
-    </div>
-    <div id="options" style="left:60%; animation-delay:3.9s">
-      <a href="http://pitchforkemporium.github.io/products">LOL4</a>
+    <div optionContainer>
+      <div id="options" style="animation-delay:3s">
+        <a href="http://pitchforkemporium.github.io/products">LOL</a>
+      </div>
+      <div id="options" style="animation-delay:3.3s">
+        <a href="http://pitchforkemporium.github.io/products">LOL2</a>
+      </div>
+      <div id="options" style="animation-delay:3.6s">
+        <a href="http://pitchforkemporium.github.io/products">LOL3</a>
+      </div>
+      <div id="options" style="animation-delay:3.9s">
+        <a href="http://pitchforkemporium.github.io/products">LOL4</a>
+      </div>
     </div>
   </body>
 </html>
