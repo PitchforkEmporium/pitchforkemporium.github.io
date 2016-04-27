@@ -49,7 +49,7 @@
         left:15%;
         margin-left:-0.3vw;
         height:2.8vw;
-        top:20vw;
+        top:21vw;
         text-align:center;
         font-family:Roboto,Arial,sans-serif;
         font-size:2vw;
@@ -94,6 +94,7 @@
   <body>
     <script>
       function verify(){
+        document.getElementById("errorMsg").innerHTML="Sent request to reddit.com";
         var user=document.getElementById("input").value;
         var url="http://www.reddit.com/"+user+"/about.json?jsonp=?";
         $(function(){
