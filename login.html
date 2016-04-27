@@ -104,11 +104,11 @@
               console.log("lol: "+karma);
             });
         });
-        if (karma!==undefined){
+        if (karma===undefined){
+          document.getElementById("errorMsg").innerHTML="An error uccurred while logging in. Try again.";
+        }else{
           console.log("DID IT!");
           window.location.href="http://pitchforkemporium.github.io/";
-        }else{
-          document.getElementById("errorMsg").innerHTML="An error uccurred while logging in. Try again.";
         }
       }
     </script>
