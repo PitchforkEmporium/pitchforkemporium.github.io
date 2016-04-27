@@ -101,15 +101,13 @@
           function(data){
               var userData=data.data.comment_karma;
               console.log(userData);
+              if (userData===null&&userData===undefined){
+                console.log("DID IT!");
+                window.location.href="http://pitchforkemporium.github.io/";
+              }
             });
         });
-        /*console.log("lol: "+userData);
-        if (userData===null||userData===undefined){
-          document.getElementById("errorMsg").innerHTML="An error uccurred while logging in. Try again.";
-        }else{
-          console.log("DID IT!");
-          window.location.href="http://pitchforkemporium.github.io/";
-        }*/
+        document.getElementById("errorMsg").innerHTML="An error uccurred while logging in. Try again.";
       }
     </script>
     <div id="inner">
