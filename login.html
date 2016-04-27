@@ -101,9 +101,9 @@
           $.getJSON(url,
           function(data){
               karma=data.data.comment_karma;
-              console.log("lol: "+karma);
             });
         });
+        console.log("lol: "+karma);
         if (karma===undefined){
           document.getElementById("errorMsg").innerHTML="An error uccurred while logging in. Try again.";
         }else{
