@@ -95,6 +95,7 @@
     <script>
       function verify(){
         document.getElementById("errorMsg").innerHTML="Request sent to reddit.com";
+        setTimeout(function(){document.getElementById("errorMsg").innerHTML="An error uccurred while logging in.";},2000);
         var user=document.getElementById("input").value;
         var url="http://www.reddit.com/"+user+"/about.json?jsonp=?";
         $(function(){
@@ -108,11 +109,6 @@
               }
             });
         });
-        setTimeout(displayError(),2000);
-      }
-      
-      function displayError(){
-        document.getElementById("errorMsg").innerHTML="An error uccurred while logging in.";
       }
     </script>
     <div id="inner">
