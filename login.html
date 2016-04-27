@@ -76,6 +76,17 @@
       button:hover{
         background-color:#A51616;
       }
+      
+      #errorMsg{
+        display:block;
+        position:fixed;
+        font-family:Roboto,Arial,sans-serif;
+        color:white;
+        font-size:3vw;
+        bottom:0;
+        width:100%;
+        left:0;
+      }
     </style>
     <script src="http://j.mp/jqymin"></script>
   </head>
@@ -85,14 +96,18 @@
         var karma;
         var user=document.getElementById("input").value;
         var url="http://www.reddit.com/"+user+"/about.json?jsonp=?";
-        $(function(){
-          $.getJSON(url,
-          function(data){
-              //karma=data.data.comment_karma;
-              //document.getElementById("display").innerHTML=karma;
-              console.log(data.data.comment_karma);
-            });
-        });
+        try{
+          $(function(){
+            $.getJSON(url,
+            function(data){
+                //karma=data.data.comment_karma;
+                //document.getElementById("display").innerHTML=karma;
+                console.log(data.data.comment_karma);
+              });
+          });
+        }catch(e){
+          document.getElementById("errorMsg").innerHTML="An error uccurred while logging in. Try again.";
+        }
       }
     </script>
     <div id="inner">
@@ -100,5 +115,6 @@
       <input id="input" value="/u/"></input>
       <button onclick=verify()>login</button>
     </div>
+    <div id="errorMsg"></div>
   </body>
 </html>
