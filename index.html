@@ -41,7 +41,6 @@
         top:50%;
         margin-top:-1px;
         background-color:white;
-        animation-delay:1s;
         z-index:10;
       }
       
@@ -62,7 +61,6 @@
         font-size:3vw;
         top:30%;
         text-align:center;
-        animation:dropdown 1s forwards 1;
         float:left;
         z-index:-2;
       }
@@ -109,6 +107,12 @@
         console.log("GOT HERE!");
         document.getElementById("name").style.animation="drop 1s forwards 1"
         document.getElementById("line").style.animation="expand 1s forwards 1"
+        document.getElementById("line").style.animationDelay="1s"
+        var stuff=document.getElementsByClassName("options");
+        for (i=0;i<stuff.length;i++){
+          stuff[i].style.animation="dropdown 1s forwards 1";
+          stuff[i].style.animationDelay=""+(2+0.3*i)+"s";
+        }
       }
     </script>
   </head>
@@ -117,16 +121,16 @@
     <div id="line"></div>
     <div id="blocker"></div>
     <div id="optionContainer">
-      <div id="options" style="animation-delay:3s">
+      <div class="options">
         <a href="http://pitchforkemporium.github.io/products">LOL</a>
       </div>
-      <div id="options" style="animation-delay:3.3s">
+      <div class="options">
         <a href="http://pitchforkemporium.github.io/products">LOL2</a>
       </div>
-      <div id="options" style="animation-delay:3.6s">
+      <div class="options">
         <a href="http://pitchforkemporium.github.io/products">LOL3</a>
       </div>
-      <div id="options" style="animation-delay:3.9s" onload=setAlign()>
+      <div class="options">
         <a href="http://pitchforkemporium.github.io/products">LOL4</a>
       </div>
     </div>
