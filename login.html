@@ -96,18 +96,15 @@
         var karma;
         var user=document.getElementById("input").value;
         var url="http://www.reddit.com/"+user+"/about.json?jsonp=?";
-        try{
-          $(function(){
-            $.getJSON(url,
-            function(data){
-                //karma=data.data.comment_karma;
-                //document.getElementById("display").innerHTML=karma;
-                console.log(data.data.comment_karma);
-              });
-          });
-        }catch(e){
-          document.getElementById("errorMsg").innerHTML="An error uccurred while logging in. Try again.";
-        }
+        $(function(){
+          $.getJSON(url,
+          function(data){
+              //karma=data.data.comment_karma;
+              //document.getElementById("display").innerHTML=karma;
+              console.log(data.data.comment_karma);
+            });
+        });
+        .error(function() {document.getElementById("errorMsg").innerHTML="An error uccurred while logging in. Try again.";})
       }
     </script>
     <div id="inner">
