@@ -101,7 +101,7 @@
           function(data){
               var userData=data.data.comment_karma;
               console.log(userData);
-              if (userData===null&&userData===undefined){
+              if (userData!==null&&userData!==undefined){
                 console.log("DID IT!");
                 window.location.href="http://pitchforkemporium.github.io/";
               }
