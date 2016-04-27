@@ -60,7 +60,7 @@
       
       #options{
         display:block;
-        position:fixed;
+        position:relative;
         font-family:Roboto,Arial,sans-serif;
         font-size:3vw;
         top:30%;
@@ -75,6 +75,12 @@
         text-decoration:none;
         pointer-events:auto;
         z-index:-1;
+      }
+      
+      #optionContainer{
+        position:fixed;
+        display:block;
+        top:40%;
       }
       
       @keyframes drop{
@@ -96,7 +102,7 @@
     <div id="name"><a href="http://pitchforkemporium.github.io/products">Pitchfork Emporium</a></div>
     <div id="line"></div>
     <div id="blocker"></div>
-    <div optionContainer>
+    <div id="optionContainer">
       <div id="options" style="animation-delay:3s">
         <a href="http://pitchforkemporium.github.io/products">LOL</a>
       </div>
