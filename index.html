@@ -115,11 +115,11 @@
       }
       function setAni(){
         console.log("GOT HERE!");
-        document.getElementById("name").style.animation="drop 1s forwards 1"
-        document.getElementById("line").style.animation="expand 1s forwards 1s 1"
+        document.getElementById("name").style.animation="drop 1s forwards 0.5s 1"
+        document.getElementById("line").style.animation="expand 1s forwards 1.5s 1"
         var stuff=document.getElementsByClassName("options");
         for (i=0;i<stuff.length;i++){
-          stuff[i].style.animation="dropdown 1s forwards "+(1.2+0.15*i)+"s 1";
+          stuff[i].style.animation="dropdown 1s forwards "+(1.7+0.15*i)+"s 1";
         }
       }
     </script>
