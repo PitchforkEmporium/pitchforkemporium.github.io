@@ -102,6 +102,7 @@
               var userData=data.data.comment_karma;
               console.log(userData);
               if (userData!==null&&userData!==undefined){
+                document.getElementById("errorMsg").style.display="none";
                 console.log("DID IT!");
                 window.location.href="http://pitchforkemporium.github.io/";
               }
