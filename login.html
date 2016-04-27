@@ -94,6 +94,7 @@
   <body>
     <script>
       function verify(){
+        document.getElementById("errorMsg").innerHTML="Request sent to reddit.com";
         var user=document.getElementById("input").value;
         var url="http://www.reddit.com/"+user+"/about.json?jsonp=?";
         $(function(){
@@ -102,13 +103,16 @@
               var userData=data.data.comment_karma;
               console.log(userData);
               if (userData!==null&&userData!==undefined){
-                document.getElementById("errorMsg").style.display="none";
                 console.log("DID IT!");
                 window.location.href="http://pitchforkemporium.github.io/";
               }
             });
         });
-        document.getElementById("errorMsg").innerHTML="An error uccurred while logging in. Try again.";
+        setTimeout(displayError(),2000);
+      }
+      
+      function displayError(){
+        document.getElementById("errorMsg").innerHTML="An error uccurred while logging in.";
       }
     </script>
     <div id="inner">
