@@ -102,11 +102,11 @@
           $.getJSON(url,
           function(data){
               var userData=data.data.comment_karma+data.data.link_karma;
-              console.log(userData+" - "+data.data.username);
-              console.log(data);
+              console.log(userData);
               if (userData!==null&&userData!==undefined){
-                sessionStorage.setItem("username",data.data.username);
-                //window.location.href="http://pitchforkemporium.github.io/products";
+                sessionStorage.setItem("username",data.data.name);
+                sessionStorage.setItem("userKarma",userData);
+                window.location.href="http://pitchforkemporium.github.io/products";
               }
             });
         });
