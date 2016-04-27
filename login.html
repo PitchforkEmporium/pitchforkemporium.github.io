@@ -56,12 +56,33 @@
         border: 0.3vw solid #F15C5C;
         box-sizing: content-box;
       }
+      
+      button{
+        display:block;
+        position:absolute;
+        width:20%;
+        height:3vw;
+        left:40%;
+        top:25vw;
+        line-height:3vw;
+        font-size:2vw;
+        color:white;
+        background-color:#A51616;
+        cursor:pointer;
+        border:none;
+      }
     </style>
+    <script>
+      function verify(){
+        console.log("It worked!");
+      }
+    </script>
   </head>
   <body>
     <div id="inner">
       <div id="name"><a href="http://pitchforkemporium.github.io/">Pitchfork Emporium</a></div>
       <input value="/u/"></input>
+      <button onclick=verify()>login</button>
     </div>
   </body>
 </html>
