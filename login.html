@@ -95,17 +95,17 @@
     <script>
       function verify(){
         document.getElementById("errorMsg").innerHTML="Request sent to reddit.com";
-        setTimeout(function(){document.getElementById("errorMsg").innerHTML="An error uccurred while logging in.";},2000);
+        setTimeout(function(){document.getElementById("errorMsg").innerHTML="An error uccurred while logging in.";},5000);
         var user=document.getElementById("input").value;
         var url="http://www.reddit.com/"+user+"/about.json?jsonp=?";
         $(function(){
           $.getJSON(url,
           function(data){
-              var userData=data.data.comment_karma;
-              console.log(userData);
+              var userData=data.data.comment_karma+data.data.link_karma;
+              console.log(userData+" - "+data.data.username);
               if (userData!==null&&userData!==undefined){
-                console.log("DID IT!");
-                window.location.href="http://pitchforkemporium.github.io/";
+                sessionStorage.setItem("username",data.data.username);
+                window.location.href="http://pitchforkemporium.github.io/products";
               }
             });
         });
