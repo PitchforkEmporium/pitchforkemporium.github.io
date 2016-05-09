@@ -91,7 +91,7 @@
       }
       #userinfo{
         bottom:50%;
-        margin-top:-2vw;
+        font-weight:300;
       }
     </style>
     <script src="http://j.mp/jqymin"></script>
@@ -101,6 +101,7 @@
       function setUser(){
         if (sessionStorage.getItem("username")!=null){
           document.getElementById("userinfo").innerHTML="Currently logged in as "+sessionStorage.getItem("username")+". Balance: "+sessionStorage.getItem("userKarma")+"";
+          document.getElementById("input").style.top="25vw"
         }
       }
       function verify(){
