@@ -123,7 +123,7 @@
       }
       document.getElementById("tItems").innerHTML=no;
       document.getElementById("tTotal").innerHTML=no*sum;
-      document.getElementById("cartInfo").innerHTML="Your cart ("+tot+")";
+      document.getElementById("cartInfo").innerHTML="Your cart ("+tot+") | Balance: "+sessionStorage.getItem("userBalance");
       if (no==0){
         document.getElementsByClassName("add")[0].style.width="24.4vw";
         document.getElementsByClassName("add")[0].style.right="2vw";
@@ -147,7 +147,7 @@
       }
       sessionStorage.setItem("items",0);
       items=0;
-      document.getElementById("cartInfo").innerHTML="Your cart (0)";
+      sessionStorage.setItem("userBalance",sessionStorage.getItem("userKarma"));
       setItems(idFull);
     }
     
@@ -155,6 +155,8 @@
       sessionStorage.setItem("item"+items,document.getElementById("mainDisplay").innerHTML);
       sessionStorage.setItem("info"+items,document.getElementById("prodID").innerHTML);
       items++;
+      var bal=sessionStorage.getItem("userBalance")-sum;
+      sessionStorage.setItem("userBalance",bal)
       sessionStorage.setItem("items",items);
       document.getElementById("cartInfo").innerHTML="Your cart ("+items+")";
       setItems(idFull);
@@ -167,6 +169,8 @@
           break;
         }
       }
+      var bal=sessionStorage.getItem("userBalance")+sum;
+      sessionStorage.setItem("userBalance",bal)
       setItems(idFull);
     }
   </script>
