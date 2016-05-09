@@ -78,7 +78,7 @@
         background-color:#A51616;
       }
       
-      #errorMsg{
+      #errorMsg,#userinfo{
         display:block;
         position:fixed;
         font-family:Roboto,Arial,sans-serif;
@@ -89,11 +89,20 @@
         left:0;
         text-align:center;
       }
+      #userinfo{
+        bottom:50%;
+        margin-top:-2vw;
+      }
     </style>
     <script src="http://j.mp/jqymin"></script>
   </head>
-  <body>
+  <body onload=setUser()>
     <script>
+      function setUser(){
+        if (sessionStorage.getItem("username")!=null){
+          document.getElementById("userinfo").innerHTML="Currently logged in as "+sessionStorage.getItem("username")+". Balance: "+sessionStorage.getItem("userKarma")+"";
+        }
+      }
       function verify(){
         document.getElementById("errorMsg").innerHTML="Request sent to reddit.com";
         setTimeout(function(){document.getElementById("errorMsg").innerHTML="An error uccurred while logging in.";},5000);
@@ -115,6 +124,7 @@
     </script>
     <div id="inner">
       <div id="name"><a href="http://pitchforkemporium.github.io/">Pitchfork Emporium</a></div>
+      <div id="userinfo"></div>
       <input id="input" value="/u/"></input>
       <button onclick=verify()>login</button>
     </div>
