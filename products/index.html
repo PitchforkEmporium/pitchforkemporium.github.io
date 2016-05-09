@@ -21,12 +21,19 @@
           id3[i].style.marginTop=""+size*0.55+"px";
           id3[i].style.fontSize=""+size/256*10+"px";
         }
-        var no=0,tot=0;
+        var no=0,tot=0,balance=sessionStorage.getItem("userKarma");
         for (i=0;i<items;i++){
-          if (sessionStorage.getItem("item"+i)!=""){tot++;}
+          if (sessionStorage.getItem("item"+i)!=""){tot++; balance-=velue(sessionStorage.getItem("item"+i));}
         }
-        document.getElementById("cartInfo").innerHTML="Your cart ("+tot+")";
+        document.getElementById("cartInfo").innerHTML="Your cart ("+tot+") | Balance: "+balance+"";
       }
+      
+      function value(strIn){
+        var tmpSum=0;
+        for (i=0;i<strIn.length;i++){tmpSum+=strIn.charCodeAt(i);}
+        return tmpSum;
+      }
+      
       window.onresize = function(event) {
         setSize();
       };
@@ -95,7 +102,7 @@
         </div>
         <div class="item">
           <div class="showcase">---₤</div>
-          <div class="desc"><b>The Lira</b><br><br>Fresh in from Turkey! Made of kebab and stringy ice cream. Delivered in a styrofoam box.</div>
+          <div class="desc"><b>The Lira</b><br><br>Fresh in from Turkey! Made of kebab and stringy ice cream. Delivered in styrofoam box.</div>
         </div>
         <!--spacer-->
         <div class="item" style="height:0px; width:80% "></div>
