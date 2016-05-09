@@ -15,12 +15,12 @@
         for (i=0;i<items;i++){
           if (sessionStorage.getItem("item"+i)!=""){tot++;}
         }
-        if (tot==0){
+        if (sessionStorage.getItem("userBalance")==null){
+          document.getElementById("innerdisplay").style="text-align:center; font-size:5vw; height:500px; line-height:500px; font-family:Roboto,Arial,sans-serif; font-weight:900; margin-top:50px;";
+          document.getElementById("innerdisplay").innerHTML="<a href=\"http:\/\/pitchforkemporium.github.io/login\">Log in to purchase</a>";
+        }else if(tot==0){
           document.getElementById("innerdisplay").style="text-align:center; font-size:5vw; height:500px; line-height:500px; font-family:Roboto,Arial,sans-serif; font-weight:900; margin-top:50px;";
           document.getElementById("innerdisplay").innerHTML="Cart empty";
-        }else if(sessionStorage.getItem("userBalance")==null){
-          document.getElementById("innerdisplay").style="text-align:center; font-size:5vw; height:500px; line-height:500px; font-family:Roboto,Arial,sans-serif; font-weight:900; margin-top:50px;";
-          document.getElementById("innerdisplay").innerHTML="Log in for purchase";
         }else{
           var isDuplicate;
           for (i=0;i<items;i++){
