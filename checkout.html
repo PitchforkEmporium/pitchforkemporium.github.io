@@ -16,13 +16,11 @@
           if (sessionStorage.getItem("item"+i)!=""){tot++;}
         }
         if (sessionStorage.getItem("userBalance")==null){
-          document.getElementById("innerdisplay").style="text-align:center; font-size:5vw; height:500px; line-height:500px; font-family:Roboto,Arial,sans-serif; font-weight:900; margin-top:50px;";
+          document.getElementById("innerdisplay").style="text-align:center; font-size:5vw; height:500px; line-height:500px; font-family:Roboto,Arial,sans-serif; font-weight:900;";
           document.getElementById("innerdisplay").innerHTML="<a href=\"http:\/\/pitchforkemporium.github.io/login\" style=\"text-decoration:none;\">Log in to purchase</a>";
-          document.getElementById("checkoutheader").style.margin="0";
         }else if(tot==0){
-          document.getElementById("innerdisplay").style="text-align:center; font-size:5vw; height:500px; line-height:500px; font-family:Roboto,Arial,sans-serif; font-weight:900; margin-top:50px;";
+          document.getElementById("innerdisplay").style="text-align:center; font-size:5vw; height:500px; line-height:500px; font-family:Roboto,Arial,sans-serif; font-weight:900;";
           document.getElementById("innerdisplay").innerHTML="Cart empty";
-          document.getElementById("checkoutheader").style.margin="0";
         }else{
           document.getElementById("checkoutheader").style.display="block";
           var isDuplicate;
