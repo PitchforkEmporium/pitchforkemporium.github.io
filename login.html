@@ -125,14 +125,14 @@
                 sessionStorage.setItem("userBalance",userData)
                 if (!window.location.href.endsWith("/login")){
                   var tmp=window.location.href,rTo="";
-                  var slashPos=0;
+                  var eqPos=0;
                   for (m=tmp.length-1;m>=0;m--){
-                    if (tmp.charAt(m)=='/'){
-                      slashPos=m;
+                    if (tmp.charAt(m)=='='){
+                      eqPos=m;
                       break;
                     }
                   }
-                  for (m=slashPos+1;m<tmp.length;m++){rTo+=tmp.charAt(m);}
+                  for (m=eqPos+1;m<tmp.length;m++){rTo+=tmp.charAt(m);}
                   window.location.href="http://pitchforkemporium.github.io/products/"+rTo+"";
                 }else{ window.location.href="http://pitchforkemporium.github.io/products";}
               }
