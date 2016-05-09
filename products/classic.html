@@ -128,7 +128,7 @@
       }else{
         document.getElementById("cartInfo").innerHTML="Your cart ("+items+")";
         document.getElementsByClassName("loginbtn")[0].style.display="block";
-        document.getElementsByClassName("add")[0].onclick="login()";
+        document.getElementsByClassName("add")[0].onclick=login();
         document.getElementsByClassName("add")[0].innerHTML="log in to add";
         for (n=0;n<3;n++){
           document.getElementsByClassName("login_required")[n].style.display="none";
