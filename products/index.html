@@ -23,15 +23,14 @@
         }
         var no=0,tot=0,balance=sessionStorage.getItem("userKarma");
         for (i=0;i<items;i++){
-          if (sessionStorage.getItem("item"+i)!=""){tot++; balance-=value(sessionStorage.getItem("item"+i));}
+          if (sessionStorage.getItem("item"+i)!=""){
+            tot++; 
+            var tmpSum=0,strIn=sessionStorage.getItem("item"+i);
+            for (i=0;i<strIn.length;i++){tmpSum+=strIn.charCodeAt(i);}
+            balance-=tmpSum;
+          }
         }
         document.getElementById("cartInfo").innerHTML="Your cart ("+tot+") | Balance: "+balance+"";
-      }
-      
-      function value(strIn){
-        var tmpSum=0;
-        for (i=0;i<strIn.length;i++){tmpSum+=strIn.charCodeAt(i);}
-        return tmpSum;
       }
       
       window.onresize = function(event) {
