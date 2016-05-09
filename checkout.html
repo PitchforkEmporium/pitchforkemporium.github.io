@@ -18,6 +18,9 @@
         if (tot==0){
           document.getElementById("innerdisplay").style="text-align:center; font-size:5vw; height:500px; line-height:500px; font-family:Roboto,Arial,sans-serif; font-weight:900; margin-top:50px;";
           document.getElementById("innerdisplay").innerHTML="Cart empty";
+        }else if(sessionStorage.getItem("userBalance")==null){
+          document.getElementById("innerdisplay").style="text-align:center; font-size:5vw; height:500px; line-height:500px; font-family:Roboto,Arial,sans-serif; font-weight:900; margin-top:50px;";
+          document.getElementById("innerdisplay").innerHTML="Log in for purchase";
         }else{
           var isDuplicate;
           for (i=0;i<items;i++){
@@ -42,7 +45,7 @@
             outStr+="<tr><td>"+pitchforks[i]+"</td><td>"+info[i]+"</td><td>"+sum+" karma</td><td>"+no[i]+"</td><td>"+sum*no[i]+" karma</td></tr>";
             totSum+=sum*parseInt(no[i]);
           }
-          outStr+="</table><br><br><table><tr><th>Total quantity</th><th>Grand total</th></tr><tr><td>"+tot+"</td><td>"+totSum+"</td></tr></table>";
+          outStr+="</table><br><br><table><tr><th>Total quantity</th><th>Grand total</th><th>Balance</th></tr><tr><td>"+tot+"</td><td>"+totSum+" karma</td><td>"+(sessionStorage.getItem("userBalance"))+" karma</td></tr></table>";
           document.getElementById("innerdisplay").innerHTML=outStr;
         }
       }
