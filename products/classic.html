@@ -123,7 +123,15 @@
       }
       document.getElementById("tItems").innerHTML=no;
       document.getElementById("tTotal").innerHTML=no*sum;
-      document.getElementById("cartInfo").innerHTML="Your cart ("+tot+") | Balance: "+sessionStorage.getItem("userBalance");
+      if (sessionStorage.getItem("userBalance")!=null){
+        document.getElementById("cartInfo").innerHTML="Your cart ("+items+") | Balance: "+sessionStorage.getItem("userBalance");
+      }else{
+        document.getElementById("cartInfo").innerHTML="Your cart ("+items+")";
+        document.getElementsByClassName("loginbtn")[0].style.display="block";
+        for (n=0;n<3;n++){
+          document.getElementsByClassName("login_required")[n].style.display="none";
+        }
+      }
       if (no==0){
         document.getElementsByClassName("add")[0].style.width="24.4vw";
         document.getElementsByClassName("add")[0].style.right="2vw";
@@ -158,7 +166,7 @@
       var bal=sessionStorage.getItem("userBalance")-sum;
       sessionStorage.setItem("userBalance",bal)
       sessionStorage.setItem("items",items);
-      document.getElementById("cartInfo").innerHTML="Your cart ("+items+")";
+      document.getElementById("cartInfo").innerHTML="Your cart ("+items+") | Balance: "+sessionStorage.getItem("userBalance");
       setItems(idFull);
     }
     
@@ -182,9 +190,12 @@
       </div>
       <div id="cart">
         <div id="cartInfo">Your cart (0)</div>
-        <div id="crtBtn" onclick=setCart()>add to cart</div>
-        <div id="crtBtn" onclick=clearCart()>clear</div>
-        <div id="crtBtn">
+        <div id="crtBtn" class="loginbtn" style="display: block;">
+          <a href="http://pitchforkemporium.github.io/login" style="color:white; text-decoration:none">log in</a>
+        </div>
+        <div id="crtBtn" class="login_required" onclick=setCart()>add to cart</div>
+        <div id="crtBtn" class="login_required" onclick=clearCart()>clear</div>
+        <div id="crtBtn" class="login_required">
           <a href="http://pitchforkemporium.github.io/checkout" style="color:white; text-decoration:none">checkout</a>
         </div>
       </div>
