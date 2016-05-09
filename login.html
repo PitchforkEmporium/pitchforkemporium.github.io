@@ -123,7 +123,8 @@
               if (userData!==null&&userData!==undefined){
                 sessionStorage.setItem("username",data.data.name);
                 sessionStorage.setItem("userKarma",userData);
-                sessionStorage.setItem("userBalance",userData)
+                sessionStorage.setItem("userBalance",userData);
+                sessionStorage.setItem("userItems",0);
                 if (!window.location.href.endsWith("/login")){
                   var tmp=window.location.href,rTo="";
                   var eqPos=0;
