@@ -21,14 +21,10 @@
           id3[i].style.marginTop=""+size*0.55+"px";
           id3[i].style.fontSize=""+size/256*10+"px";
         }
-        var no=0,tot=0;
-        for (i=0;i<items;i++){
-          if (sessionStorage.getItem("item"+i)!=""){tot++;}
-        }
+        var no=0;
         if (sessionStorage.getItem("userBalance")!=null){
-          document.getElementById("cartInfo").innerHTML="Your cart ("+tot+") | Balance: "+sessionStorage.getItem("userBalance");
+          document.getElementById("cartInfo").innerHTML="Your cart ("+sessionStorage.getItem("userItems")+") | Balance: "+sessionStorage.getItem("userBalance");
         }else{
-          document.getElementById("cartInfo").innerHTML="Your cart ("+tot+")";
           document.getElementsByClassName("loginbtn")[0].style.display="block";
           for (n=0;n<2;n++){
             document.getElementsByClassName("login_required")[n].style.display="none";
