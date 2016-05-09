@@ -23,7 +23,7 @@
         }
         var no=0,tot=0,balance=sessionStorage.getItem("userKarma");
         for (i=0;i<items;i++){
-          if (sessionStorage.getItem("item"+i)!=""){tot++; balance-=velue(sessionStorage.getItem("item"+i));}
+          if (sessionStorage.getItem("item"+i)!=""){tot++; balance-=value(sessionStorage.getItem("item"+i));}
         }
         document.getElementById("cartInfo").innerHTML="Your cart ("+tot+") | Balance: "+balance+"";
       }
