@@ -30,6 +30,9 @@
         }else{
           document.getElementById("cartInfo").innerHTML="Your cart ("+tot+")";
           document.getElementsByClassName("loginbtn")[0].style.display="block";
+          for (n=0;n<2;n++){
+            document.getElementsByClassName("login_required")[n].style.display="none";
+          }
         }
       }
       
@@ -63,8 +66,8 @@
         <div id="crtBtn" class="loginbtn" style="display:none;">
           <a href="http://pitchforkemporium.github.io/login" style="color:white; text-decoration:none">log in</a>
         </div>
-        <div id="crtBtn" onclick=clearCart()>clear</div>
-        <div id="crtBtn">
+        <div id="crtBtn" class="login_required" onclick=clearCart()>clear</div>
+        <div id="crtBtn" class="login_required">
           <a href="http://pitchforkemporium.github.io/checkout" style="color:white; text-decoration:none">checkout</a>
         </div>
       </div>
