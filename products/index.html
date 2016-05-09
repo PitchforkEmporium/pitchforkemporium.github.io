@@ -21,16 +21,11 @@
           id3[i].style.marginTop=""+size*0.55+"px";
           id3[i].style.fontSize=""+size/256*10+"px";
         }
-        var no=0,tot=0,balance=sessionStorage.getItem("userKarma");
+        var no=0,tot=0;
         for (i=0;i<items;i++){
-          if (sessionStorage.getItem("item"+i)!=""){
-            tot++; 
-            var tmpSum=0,strIn=sessionStorage.getItem("item"+i);
-            for (n=0;n<strIn.length;n++){tmpSum+=strIn.charCodeAt(n);}
-            balance-=tmpSum;
-          }
+          if (sessionStorage.getItem("item"+i)!=""){tot++;}
         }
-        document.getElementById("cartInfo").innerHTML="Your cart ("+tot+") | Balance: "+balance+"";
+        document.getElementById("cartInfo").innerHTML="Your cart ("+tot+") | Balance: "+sessionStorage.getItem("userBalance");
       }
       
       window.onresize = function(event) {
@@ -43,7 +38,8 @@
         }
         sessionStorage.setItem("items",0);
         items=0;
-        document.getElementById("cartInfo").innerHTML="Your cart (0)";
+        sessionStorage.setItem("userBalance",sessionStorage.getItem("userKarma"))
+        document.getElementById("cartInfo").innerHTML="Your cart (0) | Balance: "+sessionStorage.getItem("userBalance");
       }
     </script>
   </head>
