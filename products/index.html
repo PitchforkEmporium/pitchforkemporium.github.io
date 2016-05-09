@@ -25,7 +25,12 @@
         for (i=0;i<items;i++){
           if (sessionStorage.getItem("item"+i)!=""){tot++;}
         }
-        document.getElementById("cartInfo").innerHTML="Your cart ("+tot+") | Balance: "+sessionStorage.getItem("userBalance");
+        if (sessionStorage.getItem("userBalance")!=null){
+          document.getElementById("cartInfo").innerHTML="Your cart ("+tot+") | Balance: "+sessionStorage.getItem("userBalance");
+        }else{
+          document.getElementById("cartInfo").innerHTML="Your cart ("+tot+")";
+          document.getElementsByClassName("loginbtn")[0].style.display="block";
+        }
       }
       
       window.onresize = function(event) {
@@ -39,7 +44,11 @@
         sessionStorage.setItem("items",0);
         items=0;
         sessionStorage.setItem("userBalance",sessionStorage.getItem("userKarma"))
-        document.getElementById("cartInfo").innerHTML="Your cart (0) | Balance: "+sessionStorage.getItem("userBalance");
+        if (sessionStorage.getItem("userBalance")!=null){
+          document.getElementById("cartInfo").innerHTML="Your cart (0) | Balance: "+sessionStorage.getItem("userBalance");
+        }else{
+          document.getElementById("cartInfo").innerHTML="Your cart ("+tot+")";
+        }
       }
     </script>
   </head>
@@ -51,6 +60,9 @@
       </div>
       <div id="cart">
         <div id="cartInfo">Your cart (0)</div>
+        <div id="crtBtn" class="loginbtn" style="display:none;">
+          <a href="http://pitchforkemporium.github.io/login" style="color:white; text-decoration:none">log in</a>
+        </div>
         <div id="crtBtn" onclick=clearCart()>clear</div>
         <div id="crtBtn">
           <a href="http://pitchforkemporium.github.io/checkout" style="color:white; text-decoration:none">checkout</a>
