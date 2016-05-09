@@ -2,7 +2,7 @@
   <head>
     <link rel="icon" href="http://picturelements.github.io/pitchforkemporium/PEicon.png">
     <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,700" rel="stylesheet" type="text/css">
     <style>
       body{
         background-color:#c1272d;
@@ -58,7 +58,7 @@
         border-bottom-color: #5D0808;
       }
       
-      button{
+      #button{
         display:block;
         position:absolute;
         width:20%;
@@ -90,7 +90,9 @@
         text-align:center;
       }
       #userinfo{
+        position:absolute;
         bottom:50%;
+        margin-top:5vw;
         font-weight:300;
       }
     </style>
@@ -101,7 +103,8 @@
       function setUser(){
         if (sessionStorage.getItem("username")!=null){
           document.getElementById("userinfo").innerHTML="Currently logged in as "+sessionStorage.getItem("username")+". Balance: "+sessionStorage.getItem("userKarma")+"";
-          document.getElementById("input").style.top="25vw"
+          document.getElementById("input").style.top="25vw";
+          document.getElementById("button").style.top="28.3vw";
         }
       }
       function verify(){
@@ -127,7 +130,7 @@
       <div id="name"><a href="http://pitchforkemporium.github.io/">Pitchfork Emporium</a></div>
       <div id="userinfo"></div>
       <input id="input" value="/u/"></input>
-      <button onclick=verify()>login</button>
+      <button id="button" onclick=verify()>login</button>
     </div>
     <div id="errorMsg"></div>
   </body>
