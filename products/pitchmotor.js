@@ -26,17 +26,16 @@ function set(setID){
 }
 
 function setItems(setID){
-  var no=0,tot=0;
+  var no=0;
   for (i=0;i<items;i++){
     if (sessionStorage.getItem("item"+i)==pitchforks[setID]&&sessionStorage.getItem("item"+i)!=""){no++;}
-    if (sessionStorage.getItem("item"+i)!=""){tot++;}
   }
   document.getElementById("tItems").innerHTML=no;
   document.getElementById("tTotal").innerHTML=no*sum;
   if (sessionStorage.getItem("userBalance")!=null){
-    document.getElementById("cartInfo").innerHTML="Your cart ("+items+") | Balance: "+sessionStorage.getItem("userBalance");
+    document.getElementById("cartInfo").innerHTML="Your cart ("+sessionStorage.getItem("userItems")+") | Balance: "+sessionStorage.getItem("userBalance");
   }else{
-    document.getElementById("cartInfo").innerHTML="Your cart ("+items+")";
+    document.getElementById("cartInfo").innerHTML="Your cart (0)";
     document.getElementsByClassName("loginbtn")[0].style.display="block";
     //document.getElementsByClassName("add")[0].setAttribute("onClick","javascript: login();");
     document.getElementsByClassName("add")[0].innerHTML="log in to add to cart";
@@ -81,6 +80,7 @@ function clearCart(){
   sessionStorage.setItem("items",0);
   items=0;
   sessionStorage.setItem("userBalance",sessionStorage.getItem("userKarma"));
+  sessionStorage.setItem("userItems",0);
   setItems(idFull);
 }
 
@@ -89,10 +89,10 @@ function setCart(){
     sessionStorage.setItem("item"+items,document.getElementById("mainDisplay").innerHTML);
     sessionStorage.setItem("info"+items,document.getElementById("prodID").innerHTML);
     items++;
+    sessionStorage.setItem("userItems",sessionStorage.getItem("userItems")+1);
     var bal=sessionStorage.getItem("userBalance")-sum;
     sessionStorage.setItem("userBalance",bal)
     sessionStorage.setItem("items",items);
-    document.getElementById("cartInfo").innerHTML="Your cart ("+items+") | Balance: "+sessionStorage.getItem("userBalance");
     setItems(idFull);
   }else{login();}
 }
@@ -104,6 +104,7 @@ function removeCart(){
       break;
     }
   }
+  sessionStorage.setItem("userItems",sessionStorage.getItem("userItems")-1);
   var bal=parseInt(sessionStorage.getItem("userBalance"))+parseInt(sum);
   sessionStorage.setItem("userBalance",bal)
   setItems(idFull);
