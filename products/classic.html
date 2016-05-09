@@ -169,7 +169,7 @@
           break;
         }
       }
-      var bal=sessionStorage.getItem("userBalance")+sum;
+      var bal=parseInt(sessionStorage.getItem("userBalance"))+parseInt(sum);
       sessionStorage.setItem("userBalance",bal)
       setItems(idFull);
     }
