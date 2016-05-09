@@ -128,7 +128,7 @@
       }else{
         document.getElementById("cartInfo").innerHTML="Your cart ("+items+")";
         document.getElementsByClassName("loginbtn")[0].style.display="block";
-        document.getElementsByClassName("add")[0].setAttribute("onClick","javascript: login();");
+        //document.getElementsByClassName("add")[0].setAttribute("onClick","javascript: login();");
         document.getElementsByClassName("add")[0].innerHTML="log in to add to cart";
         for (n=0;n<3;n++){
           document.getElementsByClassName("login_required")[n].style.display="none";
@@ -175,14 +175,16 @@
     }
     
     function setCart(){
-      sessionStorage.setItem("item"+items,document.getElementById("mainDisplay").innerHTML);
-      sessionStorage.setItem("info"+items,document.getElementById("prodID").innerHTML);
-      items++;
-      var bal=sessionStorage.getItem("userBalance")-sum;
-      sessionStorage.setItem("userBalance",bal)
-      sessionStorage.setItem("items",items);
-      document.getElementById("cartInfo").innerHTML="Your cart ("+items+") | Balance: "+sessionStorage.getItem("userBalance");
-      setItems(idFull);
+      if (sessionStorage.getItem("userBalance")!=null){
+        sessionStorage.setItem("item"+items,document.getElementById("mainDisplay").innerHTML);
+        sessionStorage.setItem("info"+items,document.getElementById("prodID").innerHTML);
+        items++;
+        var bal=sessionStorage.getItem("userBalance")-sum;
+        sessionStorage.setItem("userBalance",bal)
+        sessionStorage.setItem("items",items);
+        document.getElementById("cartInfo").innerHTML="Your cart ("+items+") | Balance: "+sessionStorage.getItem("userBalance");
+        setItems(idFull);
+      }else{login();}
     }
     
     function removeCart(){
