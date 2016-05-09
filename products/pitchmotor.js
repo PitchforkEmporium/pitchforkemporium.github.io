@@ -89,7 +89,7 @@ function setCart(){
     sessionStorage.setItem("item"+items,document.getElementById("mainDisplay").innerHTML);
     sessionStorage.setItem("info"+items,document.getElementById("prodID").innerHTML);
     items++;
-    sessionStorage.setItem("userItems",parsent(sessionStorage.getItem("userItems"))+1);
+    sessionStorage.setItem("userItems",parseInt(sessionStorage.getItem("userItems"))+1);
     var bal=sessionStorage.getItem("userBalance")-sum;
     sessionStorage.setItem("userBalance",bal)
     sessionStorage.setItem("items",items);
