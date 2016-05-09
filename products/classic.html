@@ -1,3 +1,6 @@
+<!--Important: change the return_to parameter in login() on other pages-->
+
+
 <html>
   <head>
     <link rel="icon" href="http://picturelements.github.io/pitchforkemporium/PEicon.png">
@@ -90,7 +93,7 @@
     
     function setInfo(){
       var id=""+window.location.href;
-      idFull=parseInt(id.charAt(id.length-2)+""+id.charAt(id.length-1))-1;
+      idFull=parseInt(id.charAt(id.length-3)+""+id.charAt(id.length-2)+""+id.charAt(id.length-1))-1;
       set(idFull);
     }
     
@@ -148,6 +151,19 @@
       set(inID);
     }
     
+    function login(){
+      var tmp=window.location.href,rTo="";
+      var slashPos=0;
+      for (m=tmp.length-1;m>=0;m--){
+        if (tmp.charAt(m)=='/'){
+          slashPos=m;
+          break;
+        }
+      }
+      for (m=slashPos+1;m<tmp.length;m++){rTo+=tmp.charAt(m);}
+      window.location.href="http://pitchforkemporium.github.io/login?return_to="+rTo+"";
+    }
+    
     function clearCart(){
       for (i=0;i<items;i++){
         sessionStorage.removeItem("item"+i);
@@ -190,9 +206,7 @@
       </div>
       <div id="cart">
         <div id="cartInfo">Your cart (0)</div>
-        <div id="crtBtn" class="loginbtn" style="display: block;">
-          <a href="http://pitchforkemporium.github.io/login" style="color:white; text-decoration:none">log in</a>
-        </div>
+        <div id="crtBtn" class="loginbtn" onclick=login()></div>
         <div id="crtBtn" class="login_required" onclick=setCart()>add to cart</div>
         <div id="crtBtn" class="login_required" onclick=clearCart()>clear</div>
         <div id="crtBtn" class="login_required">
