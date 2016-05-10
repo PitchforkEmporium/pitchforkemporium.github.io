@@ -19,7 +19,7 @@ function set(setID){
   //table-specific
   document.getElementById("tPrice").innerHTML=sum+" karma";
   document.getElementById("tModel").innerHTML=ids[setID];
-  document.getElementById("tLength").innerHTML=""+pitch.length*43.52+" cm";
+  document.getElementById("tLength").innerHTML=""+Math.floor(pitch.length*43.52)+" cm";
   document.getElementById("tWeight").innerHTML=""+Math.floor(pitch.length*43.52*17)/1000.0+" kg";
   document.getElementById("tWarranty").innerHTML=""+(sum%7+2)+" yrs";
   document.getElementById("tCountry").innerHTML=countries[sum%7];
