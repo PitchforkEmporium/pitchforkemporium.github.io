@@ -9,6 +9,7 @@ function set(setID){
   idFull=setID;
   sum=0;
   for (i=0;i<pitch.length;i++){sum+=pitch.charCodeAt(i);}
+  sum=Math.floor(sum/10)*10;
   document.getElementById("mainDisplay").innerHTML=pitchforks[setID];
   document.getElementById("prodName").innerHTML=names[setID];
   document.getElementById("prodID").innerHTML=ids[setID];
