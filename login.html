@@ -125,6 +125,7 @@
                 sessionStorage.setItem("userKarma",userData);
                 sessionStorage.setItem("userBalance",userData);
                 sessionStorage.setItem("userItems",0);
+                clearCart();
                 if (!window.location.href.endsWith("/login")){
                   var tmp=window.location.href,rTo="";
                   var eqPos=0;
@@ -140,6 +141,17 @@
               }
             });
         });
+      }
+      function clearCart(){
+        for (i=0;i<items;i++){
+          sessionStorage.removeItem("item"+i);
+          sessionStorage.removeItem("info"+i);
+        }
+        sessionStorage.setItem("items",0);
+        items=0;
+        sessionStorage.setItem("userBalance",sessionStorage.getItem("userKarma"));
+        sessionStorage.setItem("userItems",0);
+        setItems(idFull);
       }
     </script>
     <div id="inner">
