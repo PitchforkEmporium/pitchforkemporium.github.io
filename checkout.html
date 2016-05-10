@@ -15,7 +15,7 @@
         for (i=0;i<items;i++){
           if (sessionStorage.getItem("item"+i)!=""){tot++;}
         }
-        if (sessionStorage.getItem("userBalance")==null){
+        if (sessionStorage.getItem("username")==null){
           document.getElementById("innerdisplay").style="text-align:center; font-size:5vw; height:500px; line-height:500px; font-family:Roboto,Arial,sans-serif; font-weight:900;";
           document.getElementById("innerdisplay").innerHTML="<a href=\"http:\/\/pitchforkemporium.github.io/login\" style=\"text-decoration:none;\">Log in to purchase</a>";
         }else if(tot==0){
