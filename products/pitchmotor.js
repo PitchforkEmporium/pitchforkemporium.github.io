@@ -53,6 +53,7 @@ function setItems(setID){
     document.getElementsByClassName("add")[0].style.right="8.4vw";
     document.getElementsByClassName("add")[0].style.borderRadius="3px 0 0 3px";
   }
+  console.log("pressed!");
 }
 
 function moar(inID){
