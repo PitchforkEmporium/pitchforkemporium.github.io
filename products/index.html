@@ -22,7 +22,7 @@
           id3[i].style.fontSize=""+size/256*10+"px";
         }
         var no=0;
-        if (sessionStorage.getItem("userBalance")!=null){
+        if (sessionStorage.getItem("username")!=null){
           document.getElementById("cartInfo").innerHTML="Your cart ("+sessionStorage.getItem("userItems")+") | Balance: "+sessionStorage.getItem("userBalance");
         }else{
           document.getElementsByClassName("loginbtn")[0].style.display="block";
@@ -43,7 +43,7 @@
         sessionStorage.setItem("items",0);
         items=0;
         sessionStorage.setItem("userBalance",sessionStorage.getItem("userKarma"))
-        if (sessionStorage.getItem("userBalance")!=null){
+        if (sessionStorage.getItem("username")!=null){
           document.getElementById("cartInfo").innerHTML="Your cart (0) | Balance: "+sessionStorage.getItem("userBalance");
         }else{
           document.getElementById("cartInfo").innerHTML="Your cart ("+tot+")";
