@@ -124,8 +124,8 @@
                 sessionStorage.setItem("username",data.data.name);
                 sessionStorage.setItem("userKarma",userData);
                 sessionStorage.setItem("userBalance",userData);
-                sessionStorage.setItem("userItems",0);
                 clearCart();
+                sessionStorage.setItem("userItems",0);
                 if (!window.location.href.endsWith("/login")){
                   var tmp=window.location.href,rTo="";
                   var eqPos=0;
@@ -143,7 +143,7 @@
         });
       }
       function clearCart(){
-        for (i=0;i<items;i++){
+        for (i=0;i<sessionStorage.getItem("userItems");i++){
           sessionStorage.removeItem("item"+i);
           sessionStorage.removeItem("info"+i);
         }
@@ -151,7 +151,6 @@
         items=0;
         sessionStorage.setItem("userBalance",sessionStorage.getItem("userKarma"));
         sessionStorage.setItem("userItems",0);
-        setItems(idFull);
       }
     </script>
     <div id="inner">
