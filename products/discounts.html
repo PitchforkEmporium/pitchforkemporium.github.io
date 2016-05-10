@@ -3,95 +3,26 @@
     <title>PitchforkEmporium - discounts</title>
     <link rel="icon" href="http://picturelements.github.io/pitchforkemporium/PEicon.png">
     <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Roboto:100,300,900' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:100,300,400,900' rel='stylesheet' type='text/css'>
     <link href="http://pitchforkemporium.github.io/pitchfork.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="commonCSS.css">
+    <script>
+      //Declare all variables for later use
+      var items=0,itemNo,sum,idFull;
+      items=sessionStorage.getItem("items");
+      if (items==null){items=0;}
+      var pitchforks=["---F","---L","---|","---e"];
+      var names=["33% Off","67% Off","100% Off","Manufacturer's Defect"];
+      var countries=["Germany","Mexico","North Korea","Romania","Vietnam","Italy","Azerbaijan"];
+      var ids=["DC - DPF001","DC - DPF002","DC - DPF003","DC - DPF004"];
+      var descs=["Some of us have a little less money, and that's okay! We here at PitchforkEmporium want everyone to participate in getting OP, regardless of pitchfork aptitude.",
+      "One should never spend too much on pitchforks, regardless of urgency. Physics has taught us that less surface area=greater pressure. Yes, you can get further into OP's ass than everbody else!",
+      "Mostly used to push OP away from you. Can also be used as a sharp hammer. Make sure to practice your swingin' skills!",
+      "Long Sunday, sleepy Monday at our factory! We need to get these defective pitchforks away from our stock as soon as possible. Don't worry, though! This blunt instrument fits well with the skull of a filthy liar!"
+      ];
+    </script>
+    <script type='text/javascript' src='pitchmotor.js'></script>
   </head>
-  <style>
-    #mainDisplay{
-      display:inline-block;
-      position:relative;
-      width:40%;
-      height:20.25vw;
-      line-height:20.25vw;
-      background-color:#f5f5f5;
-      left:5%;
-      top:4.5vw;
-      margin-bottom:4.5vw;
-      font-family: Arial;
-      text-align: center;
-      font-size:10vw;
-      color: #c1272d;
-      box-sizing:border-box;
-      text-shadow: 5px 5px 5px rgba(0,0,0,0.2);
-      border: 2px solid #d8d8d8;
-    }
-    
-    #mainDesc{
-      display: inline-block;
-      position: absolute;
-      width: 45%;
-      left: 50%;
-      background-color: #f5f5f5;
-      height: 20.25vw;
-      font-family:Roboto,Arial,sans-serif;
-      font-size:1.7vw;
-      top: 4.5vw; 
-    }
-    
-    inset{
-      display: block;
-      position: relative;
-      width: 90%;
-      height: 95%;
-      left: 5%;
-      top: 8.9%;
-    }
-    
-    #tableContent{
-      position: relative;
-      display: block;
-      width: 90%;
-      left: 5%;
-      min-height: 50px;
-      overflow: hidden;
-      background-color: #f5f5f5;
-      margin-top: 3.5vw;
-    }
-    
-    b{
-      font-weight:900;
-    }
-    
-    #prodName{
-      font-weight:900;
-      font-size:150%;
-    }
-    
-    #prodDesc{
-      font-size:70%;
-    }
-    
-    a{
-      color:#22f;
-      cursor:pointer;
-    }
-  </style>
-  <script>
-    //Declare all variables for later use
-    var items=0,itemNo,sum,idFull;
-    items=sessionStorage.getItem("items");
-    if (items==null){items=0;}
-    var pitchforks=["---F","---L","---|","---e"];
-    var names=["33% Off","67% Off","100% Off","Manufacturer's Defect"];
-    var countries=["Germany","Mexico","North Korea","Romania","Vietnam","Italy","Azerbaijan"];
-    var ids=["DC - DPF001","DC - DPF002","DC - DPF003","DC - DPF004"];
-    var descs=["Some of us have a little less money, and that's okay! We here at PitchforkEmporium want everyone to participate in getting OP, regardless of pitchfork aptitude.",
-    "One should never spend too much on pitchforks, regardless of urgency. Physics has taught us that less surface area=greater pressure. Yes, you can get further into OP's ass than everbody else!",
-    "Mostly used to push OP away from you. Can also be used as a sharp hammer. Make sure to practice your swingin' skills!",
-    "Long Sunday, sleepy Monday at our factory! We need to get these defective pitchforks away from our stock as soon as possible. Don't worry, though! This blunt instrument fits well with the skull of a filthy liar!"
-    ];
-  </script>
-  <script type='text/javascript' src='pitchmotor.js'></script>
   <body onload=setInfo()>
     <div id="wrapper">
       <div id="header">
