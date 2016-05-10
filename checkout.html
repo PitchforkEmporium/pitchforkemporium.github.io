@@ -47,7 +47,7 @@
             outStr+="<tr><td>"+pitchforks[i]+"</td><td>"+info[i]+"</td><td>"+sum+" karma</td><td>"+no[i]+"</td><td>"+sum*no[i]+" karma</td></tr>";
             totSum+=sum*parseInt(no[i]);
           }
-          outStr+="</table><table><tr><th>Total quantity</th><th>Grand total</th><th>Balance</th></tr><tr><td>"+tot+"</td><td>"+totSum+" karma</td><td>"+(sessionStorage.getItem("userBalance"))+" karma</td></tr></table>";
+          outStr+="</table><br><br><table style=\"margin-bottom:3vw\"><tr><th>Total quantity</th><th>Grand total</th><th>Balance</th></tr><tr><td>"+tot+"</td><td>"+totSum+" karma</td><td>"+(sessionStorage.getItem("userBalance"))+" karma</td></tr></table>";
           document.getElementById("innerdisplay").innerHTML=outStr;
         }
       }
