@@ -33,7 +33,7 @@ function setItems(setID){
   }
   document.getElementById("tItems").innerHTML=no;
   document.getElementById("tTotal").innerHTML=no*sum;
-  if (sessionStorage.getItem("userBalance")!=null){
+  if (sessionStorage.getItem("username")!=null){
     document.getElementById("cartInfo").innerHTML="Your cart ("+sessionStorage.getItem("userItems")+") | Balance: "+sessionStorage.getItem("userBalance");
   }else{
     document.getElementById("cartInfo").innerHTML="Your cart (0)";
