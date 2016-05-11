@@ -1,4 +1,4 @@
-items=sessionStorage.getItem("userItems");
+items=sessionStorage.getItem("userItemsFull");
 if (items==null){items=0;}
 
 function setInfo(){
@@ -95,6 +95,7 @@ function setCart(){
     sessionStorage.setItem("info"+items,document.getElementById("prodID").innerHTML);
     items++;
     sessionStorage.setItem("userItems",parseInt(sessionStorage.getItem("userItems"))+1);
+    sessionStorage.setItem("userItemsFull",parseInt(sessionStorage.getItem("userItemsFull"))+1);
     var bal=sessionStorage.getItem("userBalance")-sum;
     sessionStorage.setItem("userBalance",bal)
     sessionStorage.setItem("items",items);
