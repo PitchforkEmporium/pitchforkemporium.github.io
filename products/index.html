@@ -34,7 +34,7 @@
         }
         if (sessionStorage.getItem("filterselect")!=null){
           var slct=sessionStorage.getItem("filterselect");
-          document.getElementById("selection").selectedIndex=slct;
+          document.getElementById("selection").selectedIndex=slct+1;
           history.pushState('',"PitchforkEmporium - products","http://pitchforkemporium.github.io/products/?filter="+categories[slct]);
         }
         setSize();
