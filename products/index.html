@@ -6,7 +6,7 @@
     <link href='http://pitchforkemporium.github.io/pitchfork.css' rel='stylesheet' type='text/css'>
     <script>
       var items=0;
-      items=sessionStorage.getItem("items");
+      items=sessionStorage.getItem("userItems");
       if (items==null){items=0;}
       var size;
       function setSize(){
@@ -40,9 +40,9 @@
         for (i=0;i<items;i++){
           sessionStorage.removeItem("item"+i);
         }
-        sessionStorage.setItem("items",0);
         items=0;
-        sessionStorage.setItem("userBalance",sessionStorage.getItem("userKarma"))
+        sessionStorage.setItem("userBalance",sessionStorage.getItem("userKarma"));
+        sessionStorage.setItem("userItems",0);
         if (sessionStorage.getItem("username")!=null){
           document.getElementById("cartInfo").innerHTML="Your cart (0) | Balance: "+sessionStorage.getItem("userBalance");
         }else{
