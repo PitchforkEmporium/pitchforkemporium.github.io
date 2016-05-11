@@ -16,7 +16,6 @@
         var itms=document.getElementsByClassName("item");
         var category="";
         var url=window.location.href;
-        console.log(url);
         for (i=0;i<categories.length;i++){
           if (url.endsWith("filter="+categories[i])){
             category="http://pitchforkemporium.github.io/products/"+categories[i];
@@ -31,11 +30,6 @@
           if (!itms[i].getElementsByTagName("a")[0].href.startsWith(category)&&category!=""){
             itms[i].style.display="none";
           }
-        }
-        if (sessionStorage.getItem("filterselect")!=null){
-          var slct=sessionStorage.getItem("filterselect");
-          document.getElementById("selection").selectedIndex=slct;
-          history.pushState('',"PitchforkEmporium - products","http://pitchforkemporium.github.io/products/?filter="+categories[slct-1]);
         }
         setSize();
       }
