@@ -129,7 +129,7 @@ inner{
   height:100%;
 }
 
-#cart {
+#cart,#filter {
     display: block;
     position: absolute;
     right: 5%;
@@ -142,6 +142,16 @@ inner{
     font-family: Roboto,Arial,sans-serif;
     font-weight: 500;
     font-size:1.2vw;
+}
+
+#filter{
+  right:initial;
+  left:5%;
+}
+
+#filter select{
+  height: 2.2vw;
+  width: 6vw;
 }
 
 #cartInfo{
