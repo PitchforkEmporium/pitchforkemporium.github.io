@@ -12,7 +12,7 @@
       
       function init(){
         var itms=document.getElementsByClassName("item"),atags=document.getElementsByClassName("itemlink");
-        var categories=["classic","discounts","world","user"];
+        var categories=["classic#","discounts#","world#","user#"];
         var category="";
         var url=window.location.href;
         for (i=0;i<categories.length;i++){
@@ -22,6 +22,7 @@
           }
         }
         for (i=0;i<atags.length;i++){
+          console.log(itms[i].getElementsByTagName("a")[0].href);
           if (!atags[i].href.startsWith(category)&&category!=""){
             itms[i].style.display="none";
           }
