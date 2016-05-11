@@ -68,7 +68,7 @@
       };
       
       function setFilter(){
-        selected=document.getElementById("selection").selectedIndex;
+        selected=document.getElementById("selection").selectedIndex-1;
         sessionStorage.setItem("filterselect",selected);
         if (selected==0){
           window.location.href="http://pitchforkemporium.github.io/products/";
