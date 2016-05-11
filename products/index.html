@@ -77,12 +77,14 @@
       }
       
       function clearCart(){
+        items=sessionStorage.getItem("userItemsFull");
         for (i=0;i<items;i++){
           sessionStorage.removeItem("item"+i);
         }
         items=0;
         sessionStorage.setItem("userBalance",sessionStorage.getItem("userKarma"));
         sessionStorage.setItem("userItems",0);
+        sessionStorage.setItem("userItemsFull",0);
         if (sessionStorage.getItem("username")!=null){
           document.getElementById("cartInfo").innerHTML="Your cart (0) | Balance: "+sessionStorage.getItem("userBalance");
         }else{
