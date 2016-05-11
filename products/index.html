@@ -9,6 +9,26 @@
       items=sessionStorage.getItem("userItems");
       if (items==null){items=0;}
       var size;
+      
+      function init(){
+        var itms=document.getElementsByClassName("item"),atags=document.getElementsByClassName("itemlink");
+        var categories=["classic","discounts","world","user"];
+        var category="";
+        var url=window.location.href;
+        for (i=0;i<categories.length;i++){
+          if (url.endsWith(categories[i])){
+            category=categories[i];
+            break;
+          }
+        }
+        for (i=0;i<atags.length-1;i++){
+          if (!atags[i].href.startsWith(category)&&category!=""){
+            itms[i].style.display="none";
+          }
+        }
+        setSize();
+      }
+      
       function setSize(){
         size=window.innerWidth*0.9*0.225*1.5;
         var ids=document.getElementsByClassName("item");
@@ -51,7 +71,7 @@
       }
     </script>
   </head>
-  <body onload=setSize()>
+  <body onload=init()>
     <div id="wrapper">
       <div id="header">
         <div id="name"><a href="http://pitchforkemporium.github.io/">Pitchfork Emporium</a></div>
