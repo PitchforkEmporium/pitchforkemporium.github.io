@@ -1,3 +1,6 @@
+items=sessionStorage.getItem("userItems");
+if (items==null){items=0;}
+
 function setInfo(){
   var id=""+window.location.href;
   idFull=parseInt(id.charAt(id.length-3)+""+id.charAt(id.length-2)+""+id.charAt(id.length-1))-1;
