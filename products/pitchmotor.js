@@ -86,6 +86,7 @@ function clearCart(){
   items=0;
   sessionStorage.setItem("userBalance",sessionStorage.getItem("userKarma"));
   sessionStorage.setItem("userItems",0);
+  sessionStorage.setItem("userItemsFull",0);
   setItems(idFull);
 }
 
