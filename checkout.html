@@ -27,7 +27,7 @@
               if (check==pitchforks[n]&&check!=""){isDuplicate=1; no[n]++; break;}
             }
             if (check==""){isDuplicate=1;}
-            if (isDuplicate==0){
+            if (isDuplicate==0&&check!=""){
               pitchforks.push(check);
               info.push(sessionStorage.getItem("info"+i));
               no.push(1);
