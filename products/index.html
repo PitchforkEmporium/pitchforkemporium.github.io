@@ -35,7 +35,7 @@
         if (sessionStorage.getItem("filterselect")!=null){
           var slct=sessionStorage.getItem("filterselect");
           document.getElementById("selection").selectedIndex=slct;
-          history.pushState('',"PitchforkEmporium - products","http://pitchforkemporium.github.io/products/?filter="+categories[slct]);
+          history.pushState('',"PitchforkEmporium - products","http://pitchforkemporium.github.io/products/?filter="+categories[slct-1]);
         }
         setSize();
       }
@@ -73,7 +73,7 @@
         if (selected==0){
           window.location.href="http://pitchforkemporium.github.io/products/";
         }else{
-          window.location.href="http://pitchforkemporium.github.io/products/?filter="+categories[selected];
+          window.location.href="http://pitchforkemporium.github.io/products/?filter="+categories[selected-1];
         }
       }
       
