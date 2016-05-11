@@ -27,7 +27,7 @@
               if (check==pitchforks[n]&&check!=""){isDuplicate=1; no[n]++; break;}
             }
             if (check==""){isDuplicate=1;}
-            if (isDuplicate==0&&check!=""){
+            if (isDuplicate==0&&check!=null){   //code should work without check!=null...
               pitchforks.push(check);
               info.push(sessionStorage.getItem("info"+i));
               no.push(1);
