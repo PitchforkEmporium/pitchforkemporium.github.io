@@ -7,17 +7,14 @@
     <script>
       function setCart(){
         var pitchforks=[],info=[],no=[];
-        var items=0,tot=0;
+        var items=0;
         items=sessionStorage.getItem("userItemsFull");
         if (items==null){items=0;}
         
-        for (i=0;i<items;i++){
-          if (sessionStorage.getItem("item"+i)!=""){tot++;}
-        }
         if (sessionStorage.getItem("username")==null){
           document.getElementById("innerdisplay").style="text-align:center; font-size:5vw; height:500px; line-height:500px; font-family:Roboto,Arial,sans-serif; font-weight:900;";
           document.getElementById("innerdisplay").innerHTML="<a href=\"http:\/\/pitchforkemporium.github.io/login\" style=\"text-decoration:none;\">Log in to purchase</a>";
-        }else if(tot==0){
+        }else if(sessionStorage.getItem("userItems")==0){
           document.getElementById("innerdisplay").style="text-align:center; font-size:5vw; height:500px; line-height:500px; font-family:Roboto,Arial,sans-serif; font-weight:900;";
           document.getElementById("innerdisplay").innerHTML="Cart empty";
         }else{
@@ -46,7 +43,7 @@
             outStr+="<tr><td>"+pitchforks[i]+"</td><td>"+info[i]+"</td><td>"+sum+" karma</td><td>"+no[i]+"</td><td>"+sum*no[i]+" karma</td></tr>";
             totSum+=sum*parseInt(no[i]);
           }
-          outStr+="</table><br><br><table style=\"margin-bottom:3vw\"><tr><th>Total quantity</th><th>Grand total</th><th>Balance</th></tr><tr><td>"+tot+"</td><td>"+totSum+" karma</td><td>"+(sessionStorage.getItem("userBalance"))+" karma</td></tr></table>";
+          outStr+="</table><br><br><table style=\"margin-bottom:3vw\"><tr><th>Total quantity</th><th>Grand total</th><th>Balance</th></tr><tr><td>"+sessionStorage.getItem("userItems")+"</td><td>"+totSum+" karma</td><td>"+(sessionStorage.getItem("userBalance"))+" karma</td></tr></table>";
           document.getElementById("innerdisplay").innerHTML=outStr;
         }
       }
