@@ -32,6 +32,10 @@
             itms[i].style.display="none";
           }
         }
+        var type=sessionStorage.getItem("selected");
+        if (!url.endsWith("products/")&&type!=null&&type>0){
+          window.location.href="http://pitchforkemporium.github.io/products/?filter="+categories[type-1];
+        }
         setSize();
       }
       
@@ -69,6 +73,7 @@
         }else{
           window.location.href="http://pitchforkemporium.github.io/products/?filter="+categories[selected-1];
         }
+        sessionStorage.setItem("selected",selected);
       }
       
       function clearCart(){
