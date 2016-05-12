@@ -7,6 +7,18 @@ function setInfo(){
   set(idFull);
 }
 
+function setInfo2(){
+  var id=""+window.location.href;
+  idFull=parseInt(id.charAt(id.length-3)+""+id.charAt(id.length-2)+""+id.charAt(id.length-1))-1;
+  pitchforks[0]=getPitchfork(idFull);
+  names[0]=getItemName(idFull);
+  ids[0]="US - UPF"+id.charAt(id.length-3)+""+id.charAt(id.length-2)+""+id.charAt(id.length-1);
+  descs[0]=getItemDesc(idFull);
+  idFull=0;
+  custom=1;
+  set(0);
+}
+
 function set(setID){
   var pitch=pitchforks[setID];
   idFull=setID;
