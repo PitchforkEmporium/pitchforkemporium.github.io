@@ -42,8 +42,8 @@
         var count=0;
         for (i=0;i<uP.length;i++){
           if (uP[i].getElementById("userPitchfork")!=null){
-            uP[count].getElementById("userPitchfork").innerHTML=getPitchforks(count);
-            uP[count].getElementById("userDesc").innerHTML="<b>"+getItemName(count)+"</b><br><br>"+getAbridgedItemDesc(count);
+            uP[i].getElementById("userPitchfork").innerHTML=getPitchforks(count);
+            uP[i].getElementById("userDesc").innerHTML="<b>"+getItemName(count)+"</b><br><br>"+getAbridgedItemDesc(count);
             count++;
           }
         }
