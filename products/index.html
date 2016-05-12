@@ -5,6 +5,7 @@
     <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto:100,300,400,900' rel='stylesheet' type='text/css'>
     <link href='http://pitchforkemporium.github.io/pitchfork.css' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="database.js"></script>
     <script>
       var items=0,selected=0;
       items=sessionStorage.getItem("userItems");
@@ -35,6 +36,12 @@
         var type=sessionStorage.getItem("selected");
         if (url.endsWith("products/")&&type!=null&&type>0){
           window.location.href="http://pitchforkemporium.github.io/products/?filter="+categories[type-1];
+        }
+        
+        var uP=document.getElementsByClassName("userPitchforks"),uD=document.getElementsByClassName("userDesc");
+        for (i=0;i<uP.length;i++){
+          uP[i].innerHTML=getPitchforks(i);
+          uD[i].innerHTML="<b>"+getItemName(i)+"</b><br><br>"+getAbridgedItemDesc(i);
         }
         setSize();
       }
@@ -200,8 +207,8 @@
         </div>
         <div class="item">
           <a href="user#UPF001">
-            <div class="showcase">--|-|-[</div>
-            <div class="desc"><b>PicturElements Special</b><br><br>A neat block design with sharp edges. It can be used to stab and hit like a hammer!</div>
+            <div class="showcase" class="userPitchfork"></div>
+            <div class="desc" class="userDesc"><b>Pane gone goofed.</b><br>Sorry, something went wrong.</div>
           </a>
         </div>
         
