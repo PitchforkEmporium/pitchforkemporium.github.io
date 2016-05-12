@@ -40,8 +40,8 @@
         
         var uP=document.getElementsByTagName("uP"),uD=document.getElementsByTagName("uD");
         for (i=0;i<uP.length;i++){
-            uP[i].innerHTML=getPitchforks(count);
-            uD[i].innerHTML="<b>"+getItemName(count)+"</b><br><br>"+getAbridgedItemDesc(count);
+            uP[i].innerHTML=getPitchforks(i);
+            uD[i].innerHTML="<b>"+getItemName(i)+"</b><br><br>"+getAbridgedItemDesc(i);
         }
         setSize();
       }
