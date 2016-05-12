@@ -38,14 +38,10 @@
           window.location.href="http://pitchforkemporium.github.io/products/?filter="+categories[type-1];
         }
         
-        var uP=document.getElementsByClassName("items");
-        var count=0;
+        var uP=document.getElementsByTagName("uP"),uD=document.getElementsByTagName("uD");
         for (i=0;i<uP.length;i++){
-          if (uP[i].getElementById("userPitchfork")!=null){
-            uP[i].getElementById("userPitchfork").innerHTML=getPitchforks(count);
-            uP[i].getElementById("userDesc").innerHTML="<b>"+getItemName(count)+"</b><br><br>"+getAbridgedItemDesc(count);
-            count++;
-          }
+            uP[i].innerHTML=getPitchforks(count);
+            uD[i].innerHTML="<b>"+getItemName(count)+"</b><br><br>"+getAbridgedItemDesc(count);
         }
         setSize();
       }
@@ -211,8 +207,8 @@
         </div>
         <div class="item">
           <a href="user#UPF001">
-            <div class="showcase" id="userPitchfork"></div>
-            <div class="desc" id="userDesc"><b>Panel gone goofed.</b><br><br>Sorry, something went wrong.</div>
+            <uP class="showcase"></uP>
+            <uD class="desc"><b>Panel gone goofed.</b><br><br>Sorry, something went wrong.</uD>
           </a>
         </div>
         
