@@ -41,7 +41,11 @@
         
         for (i=0;i>=0;i++){
           if (getPitchfork(i)!=""){
-            $("<div class=\"item\"><a href=\"user#UPF001\"><uP class=\"showcase\"></uP><uD class=\"desc\"><b>Panel gone goofed.</b><br><br>Sorry, something went wrong.</uD></a></div>").insertBefore("#beforehere");
+            var idStr="";
+            if (i+1<10){idStr="00"+(i+1);}
+            else if (i+1<100){idStr="0"+(i+1);}
+            else {idStr=""+(i+1);}
+            $("<div class=\"item\"><a href=\"user#"+idStr+"\"><uP class=\"showcase\"></uP><uD class=\"desc\"><b>Panel done goofed.</b><br><br>Sorry, something went wrong.</uD></a></div>").insertBefore("#beforehere");
           }else{
             break;
           }
@@ -214,13 +218,7 @@
             <div class="desc"><b>The Yen</b><br><br>A small, efficient tool from Japan! Used by samurais and the Japanese shitpost army.</div>
           </a>
         </div>
-        <!--<div class="item">
-          <a href="user#UPF001">
-            <uP class="showcase"></uP>
-            <uD class="desc"><b>Panel gone goofed.</b><br><br>Sorry, something went wrong.</uD>
-          </a>
-        </div>-->
-        <div id="beforehere"></div>
+        <div id="beforehere"></div> <!--Little div to guide the jQuery script-->
         
         <!--spacer-->
         <div class="item" style="height:0px; width:80% "></div>
