@@ -1,6 +1,6 @@
 var pitchforkBase=[
   "--|-[",
-  "",
+  "--->{",
   "",
   "",
   "",
@@ -9,7 +9,7 @@ var pitchforkBase=[
 
 var nameBase=[
   "PicturElements Special",
-  "",
+  "Flower Petal",
   "",
   "",
   "",
@@ -18,7 +18,7 @@ var nameBase=[
 
 var descBase=[
   "MUH PITCHFORK",
-  "",
+  "MUH SECOND PITCHFORK",
   "",
   "",
   "",
@@ -27,12 +27,16 @@ var descBase=[
 
 var descAbridgedBase=[
   "A neat block design with sharp edges. It can be used to stab and hit like a hammer!",
-  "",
+  "Proud like a little flower, this pitchfork stands out against the rest.",
   "",
   "",
   "",
   ""
 ];
+
+function getArrayLength(){
+  return pitchforkBase.length;
+}
 
 function getPitchfork(inp){
   return pitchforkBase[inp];
