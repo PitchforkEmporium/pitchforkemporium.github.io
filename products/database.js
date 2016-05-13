@@ -1,7 +1,7 @@
 var pitchforkBase=[
   "--|-[",
   "---&gt;{",
-  "",
+  "&#26E9;",
   "",
   "",
   ""
@@ -10,7 +10,7 @@ var pitchforkBase=[
 var nameBase=[
   "PicturElements Special",
   "Flower Petal",
-  "",
+  "TEST",
   "",
   "",
   ""
@@ -19,7 +19,7 @@ var nameBase=[
 var descBase=[
   "MUH PITCHFORK",
   "MUH SECOND PITCHFORK",
-  "",
+  "MUH THRID TEST",
   "",
   "",
   ""
@@ -28,7 +28,7 @@ var descBase=[
 var descAbridgedBase=[
   "A neat block design with sharp edges. It can be used to stab and hit like a hammer!",
   "Proud like a little flower, this pitchfork stands out against the rest.",
-  "",
+  "Lol",
   "",
   "",
   ""
