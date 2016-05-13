@@ -1,7 +1,6 @@
 var pitchforkBase=[
   "--|-[",
   "---&gt;{",
-  "&#9961",
   "---¤",
   "",
   ""
@@ -10,7 +9,6 @@ var pitchforkBase=[
 var nameBase=[
   "PicturElements Special",
   "Flower Petal",
-  "TEST",
   "Lexby-Mace",
   "",
   ""
@@ -19,7 +17,6 @@ var nameBase=[
 var descBase=[
   "MUH PITCHFORK",
   "MUH SECOND PITCHFORK",
-  "MUH THRID TEST",
   "A mace specifically made for hunting OP. With its short and leather-covered handle you will never lose grip of this majestic creation.",
   "",
   ""
@@ -28,7 +25,6 @@ var descBase=[
 var descAbridgedBase=[
   "A neat block design with sharp edges. It can be used to stab and hit like a hammer!",
   "Proud like a little flower, this pitchfork stands out against the rest.",
-  "Lol",
   "A mace specifically made for hunting OP.",
   "",
   ""
