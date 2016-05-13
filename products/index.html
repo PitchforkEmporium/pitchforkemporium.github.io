@@ -29,16 +29,14 @@
             break;
           }
         }
-        for (i=0;i<itms.length-1;i++){
-          if (!itms[i].getElementsByTagName("a")[0].href.startsWith(category)&&category!=""){
-            itms[i].style.display="none";
-          }
-        }
+        
+        //Edit URL (indirectly)
         var type=sessionStorage.getItem("selected");
         if (url.endsWith("products/")&&type!=null&&type>0){
           window.location.href="http://pitchforkemporium.github.io/products/?filter="+categories[type-1];
         }
         
+        //Generate itembox
         for (i=0;i>=0;i++){
           if (getPitchfork(i)!=""){
             var idStr="";
@@ -51,10 +49,18 @@
           }
         }
         
+        //Auto-add information
         var uP=document.getElementsByTagName("uP"),uD=document.getElementsByTagName("uD");
         for (i=0;i<uP.length;i++){
             uP[i].innerHTML=getPitchfork(i);
             uD[i].innerHTML="<b>"+getItemName(i)+"</b><br><br>"+getAbridgedItemDesc(i);
+        }
+        
+        //Filter
+        for (i=0;i<itms.length-1;i++){
+          if (!itms[i].getElementsByTagName("a")[0].href.startsWith(category)&&category!=""){
+            itms[i].style.display="none";
+          }
         }
         setSize();
       }
