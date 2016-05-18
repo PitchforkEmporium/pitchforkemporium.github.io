@@ -14,7 +14,7 @@ function setInfo2(){
   idFull=parseInt(id.charAt(id.length-3)+""+id.charAt(id.length-2)+""+id.charAt(id.length-1))-1;
   pitchforks[0]=getPitchfork(idFull);
   names[0]=getItemName(idFull);
-  ids[0]="US - UPF"+id.charAt(id.length-3)+""+id.charAt(id.length-2)+""+id.charAt(id.length-1)+"");
+  ids[0]="US - UPF"+id.charAt(id.length-3)+""+id.charAt(id.length-2)+""+id.charAt(id.length-1);
   document.getElementById("tUser").innerHTML=getUser(idFull);
   document.getElementById("prodID").innerHTML=ids[idFull]+"<br>\<sm style=\"font-size:70%\">designed by "+getUser(idFull)+"\<\/sm>";
   descs[0]=getItemDesc(idFull);
