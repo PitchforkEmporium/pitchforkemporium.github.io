@@ -13,6 +13,7 @@ function setInfo2(){
   pitchforks[0]=getPitchfork(idFull);
   names[0]=getItemName(idFull);
   ids[0]="US - UPF"+id.charAt(id.length-3)+""+id.charAt(id.length-2)+""+id.charAt(id.length-1);
+  document.getElementById("tUser").innerHTML=getUser(idFull);
   descs[0]=getItemDesc(idFull);
   idFull=0;
   custom=1;
