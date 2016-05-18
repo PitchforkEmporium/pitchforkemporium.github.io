@@ -1,9 +1,11 @@
 items=sessionStorage.getItem("userItemsFull");
+var tmpUserName;
 if (items==null){items=0;}
 
 function setInfo(){
   var id=""+window.location.href;
   idFull=parseInt(id.charAt(id.length-3)+""+id.charAt(id.length-2)+""+id.charAt(id.length-1))-1;
+  document.getElementById("prodID").innerHTML=ids[idFull];
   set(idFull);
 }
 
@@ -12,8 +14,10 @@ function setInfo2(){
   idFull=parseInt(id.charAt(id.length-3)+""+id.charAt(id.length-2)+""+id.charAt(id.length-1))-1;
   pitchforks[0]=getPitchfork(idFull);
   names[0]=getItemName(idFull);
-  ids[0]="US - UPF"+id.charAt(id.length-3)+""+id.charAt(id.length-2)+""+id.charAt(id.length-1)+"<br>\<sm style=\"font-size:70%\">designed by "+getUser(idFull+"\<\/sm>");
-  document.getElementById("tUser").innerHTML=getUser(idFull);
+  tmpUserName=getUser(idFull);
+  ids[0]="US - UPF"+id.charAt(id.length-3)+""+id.charAt(id.length-2)+""+id.charAt(id.length-1)+"");
+  document.getElementById("tUser").innerHTML=tmpUserName;
+  document.getElementById("prodID").innerHTML=ids[idFull]+""+"<br>\<sm style=\"font-size:70%\">designed by "+tmpUserName+"\<\/sm>";
   descs[0]=getItemDesc(idFull);
   idFull=0;
   custom=1;
@@ -28,7 +32,6 @@ function set(setID){
   sum=Math.floor(sum/10)*10;
   document.getElementById("mainDisplay").innerHTML=pitchforks[setID];
   document.getElementById("prodName").innerHTML=names[setID];
-  document.getElementById("prodID").innerHTML=ids[setID];
   document.getElementById("prodDesc").innerHTML=descs[setID];
   document.getElementById("price").innerHTML=sum+" karma";
   
