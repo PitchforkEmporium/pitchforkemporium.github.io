@@ -30,6 +30,16 @@ var descAbridgedBase=[
   ""
 ];
 
+var userBase=[
+  "PicturElements",
+  "PicturElements",
+  "DNAnf",
+  "",
+  "",
+  "",
+  ""
+]
+
 function getArrayLength(){
   return pitchforkBase.length;
 }
@@ -48,4 +58,8 @@ function getItemDesc(inp){
 
 function getAbridgedItemDesc(inp){
   return descAbridgedBase[inp];
+}
+
+function getUser(inp){
+  return userBase[inp];
 }
