@@ -16,7 +16,7 @@ function setInfo2(){
   names[0]=getItemName(idFull);
   ids[0]="US - UPF"+id.charAt(id.length-3)+""+id.charAt(id.length-2)+""+id.charAt(id.length-1);
   document.getElementById("tUser").innerHTML=getUser(idFull);
-  document.getElementById("prodID").innerHTML=ids[idFull]+"<br>\<sm style=\"font-size:70%\">designed by "+getUser(idFull)+"\<\/sm>";
+  document.getElementById("prodID").innerHTML=ids[0]+"<br>\<sm style=\"font-size:70%\">designed by "+getUser(idFull)+"\<\/sm>";
   descs[0]=getItemDesc(idFull);
   idFull=0;
   custom=1;
