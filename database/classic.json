@@ -24,7 +24,7 @@
     "fork": "---[",
     "title": "Array",
     "desc": "The programmer's best friend! It looks like a single pitchfork, but no, it's actually 100 pitchforks in one!",
-    "descLong": "for (var i=0;i<100;i++){<br>&nbsp;&nbsp;&nbsp;pitchforks.push("---[");<br>}<br><br>Programming, bitches! Now you too can store many pitchforks in one!",
+    "descLong": "for (var i=0;i<100;i++){<br>&nbsp;&nbsp;&nbsp;pitchforks.push(\"---[\");<br>}<br><br>Programming, bitches! Now you too can store many pitchforks in one!",
     "price": 575
   },
   "PF005": {
