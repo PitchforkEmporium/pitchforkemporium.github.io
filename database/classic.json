@@ -1,0 +1,37 @@
+{
+  "PF001": {
+    "fork": "---E",
+    "title": "Traditional",
+    "desc": "The classic pitchfork! Repel bundles of sticks and filthy liars with ease!",
+    "descLong": "The traditional pitchfork! As seen in \"Frankenstein's monster\", \"Shrek\", and many comment sections of OP's submissions! This pitchfork is versatile and simple, and compatible with all OSs and browsers, even IE!",
+    "price": 299, 
+  },
+  "PF002": {
+    "fork": "Ǝ---",
+    "title": "Left-handed",
+    "desc": "Let the hate flow through all people! Handle made of special left-handed isomer wood.",
+    "descLong": "Let those left-handed people join in on the hate! Don't hinder anybody from getting OP! It's a basic human right to heckle those who have done wrong and reposted stuff from the top 10 most popular posts.",
+    "price": 299, 
+  },
+  "PF003": {
+    "fork": "---{",
+    "title": "Fancy",
+    "desc": "Manufactured by the smith of Versailles, this is the pitchfork for the real connoisseur that dwells within all neckbeards.",
+    "descLong": "That wretched \"Original poster\" scoundrel shall feel our wrath! It is indeed correct, dear customer, that this \"Original Poster\" swine is a compiled set of twigs, and shall be punished for his misdeeds as reposteur and liar! Pitchfork comes equipped with Charles , the best pitchfork-flailing servant in England!",
+    "price": 649, 
+  },
+  "PF004": {
+    "fork": "---[",
+    "title": "Array",
+    "desc": "The programmer's best friend! It looks like a single pitchfork, but no, it's actually 100 pitchforks in one!",
+    "descLong": "for (var i=0;i<100;i++){<br>&nbsp;&nbsp;&nbsp;pitchforks.push("---[");<br>}<br><br>Programming, bitches! Now you too can store many pitchforks in one!",
+    "price": 575, 
+  },
+  "PF005": {
+    "fork": "---<",
+    "title": "Minimalistic",
+    "desc": "The perfect pitchfork for the ones who crave precision and style! Hide it in OP's HTML and it'll mess things up!",
+    "descLong": "Style. Class. Elegance. This exquisite pitchfork designed by Apple and PitchforkEmporium marks the pinnacle of pitchforkian design. Two-times Golden Pitchfork-awarded, nominated for \"best pitchfork of 2016\" by the Frankenstein Academy!",
+    "price": 199, 
+  }
+}
