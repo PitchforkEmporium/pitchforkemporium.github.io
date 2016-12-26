@@ -1,0 +1,30 @@
+{
+  "WPF001": {
+    "fork": "---€",
+    "title": "The Euro",
+    "desc": "Fresh in from the European Union! Beret, sleeping Spaniard, knödel, and pasta included.",
+    "descLong": "Hunting OP brings us together; The European union brings Europe together. [citation needed] Conspire against OP and join the union at the same time with this Euro pitchfork! Four prongs make for efficient hunting!",
+    "price": 199
+  },
+  "WPF002": {
+    "fork": "---£",
+    "title": "The Pound",
+    "desc": "\"Oi m8, u 'avin a giggle? I'mma do ur fookin 'ead in, I swer on me gran!\"",
+    "descLong": "It is indeed so, that there exist lying gentlemen and gentlewomen in the glorious kingdom of Elizabeth! Away with thee, scoundrel! Hurry up, I say! I shall introduce thee to thy creator!",
+    "price": 169
+  },
+  "WPF003": {
+    "fork": "---₤",
+    "title": "The Lira",
+    "desc": "Fresh in from Turkey! Made of kebab and stringy ice cream. Delivered in a styrofoam box.",
+    "descLong": "This is a versatile pitchfork! It can be used to ward off lying scum and pick up kebab meat! Designed by Erdoğan himself, because he said he should.",
+    "price": 730
+  },
+  "WPF004": {
+    "fork": "---¥",
+    "title": "The Yen",
+    "desc": "A small, efficient tool from Japan! Used by samurais and the Japanese shitpost army.",
+    "descLong": "The Japanese are always up front in the pitchfork industry. This is the newest style, designed with love in Japan, intended to be used like a hammer! Boy is it efficient! We put this pitchfork to the test on 100 karma whores and none of them survived!",
+    "price": 2437
+  }
+}
